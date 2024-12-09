@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <CounterApp />
+    <router-view />
   </div>
 </template>
 
 <script>
-import CounterApp from './components/CounterApp.vue'
 
 export default {
-  name: 'App',
-  components: {
-    CounterApp
-  }
+  name: 'App'
 }
 </script>
 
