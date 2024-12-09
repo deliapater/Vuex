@@ -7,6 +7,11 @@
       </form>
       <ul>
         <li v-for="task in tasks" :key="task.id">
+        <input 
+            type="checkbox"
+            :checked="task.completed"
+            @change="toggleTask(task.id)"
+        />
           <span
             :class="{ completed: task.completed }"
             @click="toggleTask(task.id)"
@@ -56,7 +61,7 @@
     font-family: Arial, sans-serif;
   }
   
-  input {
+  input[type="text"] {
     width: 80%;
     padding: 8px;
     margin: 10px 0;
